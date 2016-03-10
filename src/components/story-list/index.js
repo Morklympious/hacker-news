@@ -1,25 +1,27 @@
 "use strict"
 
-var m  = require('mithril'),
-    db = require('../../config/firebase.js');
+var m    = require('mithril'),
+    db   = require('../../config/firebase.js'),
+    item = require('../story-list-item')
 
 module.exports = {
   controller: function() {
-    var ctrl = this,
-        top  = db.child('topstories');
+    var ctrl      = this,
+        endpoint  = db.child('topstories');
 
-    ctrl.stories = m.prop([]);
+    ctrl.stories   = m.prop([]);
 
-    top.on('value', function(snapshot){
-      ctrl.stories(snapshot.val());
+    endpoint.on('value', function(snap){
+      ctrl.stories(snap.val());
+
       m.redraw();
     });
 
   },
 
   view: function(ctrl) {
-    return m('.list', ctrl.stories().map(function(story){
-      return m('h2', story);
+    return m('.list', ctrl.stories().map(function(id){
+      return m(item, {id: id});
     }));
 
   }
