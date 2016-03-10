@@ -32,10 +32,18 @@ require('./global.css');
 
 */
 
+var db = require('./config/firebase.js').child('topstories');
+
 m.route(global.document.body, '/', {
   '/': {
-    view: function() {
-      return m('h1', 'AYYYYY')
+    controller: function() {
+      var ctrl = this;
+    },
+    view: function(ctrl) {
+
+      return m('.container', ctrl.stories().map(function(item){
+        return m('h2', item.color)
+      }))
     }
   }
 });
