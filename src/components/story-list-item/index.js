@@ -12,18 +12,23 @@ module.exports = {
     ctrl.story = {};
 
     endpoint.on('value', function(snap){
+
       var snapshot = snap.val();
+
 
       ctrl.story.title = snapshot.title;
       ctrl.story.id    = snapshot.id;
 
+      m.redraw();
     });
 
   },
 
   view: function(ctrl) {
     return m('.list', [
-       m('h2', ctrl.story.title)
+       m('.story-list-item', [
+         m('a', {href: '/stories/' + ctrl.story.id, config: m.route}, ctrl.story.title)
+       ])
     ]);
 
   }

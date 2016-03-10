@@ -7,12 +7,12 @@ var m    = require('mithril'),
 module.exports = {
   controller: function() {
     var ctrl      = this,
-        endpoint  = db.child('topstories');
+        endpoint  = db.child('topstories').limitToFirst(25);
 
-    ctrl.stories   = m.prop([]);
+    ctrl.stories  = [];
 
-    endpoint.on('value', function(snap){
-      ctrl.stories(snap.val());
+    endpoint.on('child_added', function(snap){
+      ctrl.stories.push(snap.val());
 
       m.redraw();
     });
@@ -20,7 +20,7 @@ module.exports = {
   },
 
   view: function(ctrl) {
-    return m('.list', ctrl.stories().map(function(id){
+    return m('.list', ctrl.stories.map(function(id){
       return m(item, {id: id});
     }));
 
