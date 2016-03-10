@@ -2,10 +2,7 @@
 
 var m = require('mithril');
 
-m.route(global.document.body, '/', {
-  '/': {
-    view: function(){
-    return m('h1', 'Hey!')
-    }
-  } 
+m.route(document.body, '/stories', {
+  '/stories':         require('./components/story-list'),
+  '/stories/:story':  require('./components/story'),
 });

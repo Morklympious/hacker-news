@@ -1,5 +1,5 @@
-var m = require('mithril');
-var css = require('./css/example.css');
-
+// CSS
 require('./global.css');
+
+// Routing logic for Mithril
 require('./routes.js');
