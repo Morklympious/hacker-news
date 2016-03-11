@@ -1,7 +1,9 @@
 "use strict"
 
 var m   = require('mithril'),
-    api = require('../config/firebase.js');
+    api = require('../config/firebase.js'),
+
+    css = require('./css/story-list-item.css');
 
 module.exports = {
   controller: function(attrs) {
@@ -19,14 +21,15 @@ module.exports = {
   },
 
   view: function(ctrl) {
-    return m('li', [
-      m('div', [
+    return m('li', {class: css.item}, [
+      m('div', {class: css.container}, [
         m('a', {
-          href: '/stories/' + ctrl.story.id,
-          config: m.route,
+          class: css.link,
+          href: ctrl.story.url,
           story: ctrl.story
         }, ctrl.story.title)
       ])
      ])
+
   }
 }

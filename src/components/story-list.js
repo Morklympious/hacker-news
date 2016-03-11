@@ -2,7 +2,9 @@
 
 var m    = require('mithril'),
     api  = require('../config/firebase.js'),
-    item = require('./story-list-item')
+    item = require('./story-list-item'),
+
+    css  = require('./css/story-list.css');
 
 module.exports = {
   controller: function() {
@@ -19,12 +21,15 @@ module.exports = {
   },
 
   view: function(ctrl) {
-    return m('ul', ctrl.stories.map(function(id, index){
-      return m(item, {
-        id: id,
-        index: index
-      });
-    }));
+    return m('div', [
+      m('ul', {class: css.list}, ctrl.stories.map(function(id, index){
+        return m(item, {
+          id: id,
+          index: index
+        });
+      }))
+    ])
+
 
   }
 }
