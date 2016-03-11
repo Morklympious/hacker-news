@@ -1,5 +1,11 @@
+"use strict";
+
+// Routing logic for Mithril
+var m = require('mithril');
+
 // CSS
 require('./global.css');
 
-// Routing logic for Mithril
-require('./routes.js');
+m.route(document.body, '/stories', {
+  '/stories':         require('./components/story-list'),
+});
