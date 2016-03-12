@@ -24,9 +24,10 @@ module.exports = {
     return m('li', {class: css.item}, [
       m('div', {class: css.container}, [
         m('a', {
-          class: css.link,
-          href: ctrl.story.url,
-          story: ctrl.story
+          class:  css.link,
+          href:   ctrl.story.url,
+          target: '_blank',
+          story:  ctrl.story
         }, ctrl.story.title)
       ])
      ])

@@ -1,19 +1,17 @@
 @value container-background: #A3BCF9;
 
 .item {
-  color: white;
+
 }
 
 .container {
-  padding: 16px;
-  background: container-background;
+  padding: 16px 0;
 }
 
 .link {
-  color: #fff;
-  text-decoration: none;
+  color: #444;
 }
 
 .link:hover {
-  color: red;
+
 }
