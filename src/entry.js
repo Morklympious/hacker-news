@@ -7,5 +7,5 @@ var m = require('mithril');
 require('./global.css');
 
 m.route(document.body, '/', {
-  '/': require('./components/app'),
+  '/': require('./components/story-list'),
 });

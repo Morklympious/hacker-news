@@ -1,0 +1,25 @@
+@value container-background: #A3BCF9;
+
+.block {
+  display: block;
+}
+
+.container {
+
+}
+
+.meta {
+  border-top: 1px solid black;
+  height: 20px;
+}
+
+.link {
+  composes: block;
+  color: #444;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.link:hover {
+ background: #eee;
+}

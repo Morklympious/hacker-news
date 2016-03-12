@@ -1,9 +1,9 @@
 "use strict"
 
 var m   = require('mithril'),
-    api = require('../config/firebase.js'),
+    api = require('../lib/firebase'),
 
-    css = require('./css/story-list-item.css');
+    css = require('./css/story.css');
 
 module.exports = {
   controller: function(attrs) {
@@ -13,6 +13,7 @@ module.exports = {
 
     ctrl.story = {};
 
+    // Assign the story when we get the data
     db.on('value', function(snap){
       ctrl.story = snap.val();
       m.redraw();
@@ -21,16 +22,16 @@ module.exports = {
   },
 
   view: function(ctrl) {
+
     return m('li', {class: css.item}, [
       m('div', {class: css.container}, [
         m('a', {
           class:  css.link,
           href:   ctrl.story.url,
           target: '_blank',
-          story:  ctrl.story
         }, ctrl.story.title)
       ])
-     ])
+    ]);
 
   }
 }

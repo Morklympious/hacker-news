@@ -4,6 +4,8 @@
    since you'll want everything to be able to read these styles.
 */
 
+@import('node_modules/build/pure.css');
+
 * {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -21,4 +23,6 @@ body {
   10px
 }
 
-h1,h2,h3{line-height:1.2}
+h1,h2,h3 {
+  line-height:1.2
+}
