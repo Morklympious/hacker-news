@@ -1,4 +1,6 @@
 .list {
+  composes: container from "./_flex.css";
+  
   padding: 0;
   margin: 0;
   list-style: none;

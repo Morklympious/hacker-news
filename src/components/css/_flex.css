@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item {
+  flex-basis: 25%;
+  height: 300px; 
+}

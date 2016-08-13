@@ -1,11 +1,8 @@
-"use strict";
-
-// Routing logic for Mithril
-var m = require('mithril');
+var m = require("mithril");
 
 // CSS
-require('./global.css');
+require("./global.css");
 
-m.route(document.body, '/stories', {
-  '/stories':         require('./components/story-list'),
+m.route(document.body, "/stories", {
+  "/stories" : require("./components/story-list")
 });

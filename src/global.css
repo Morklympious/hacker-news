@@ -12,4 +12,14 @@
 body {
   margin: 0;
   padding: 16px;
+  background-color: #252839;
+}
+
+a:hover {
+  color: #b5b5b7;
+}
+
+:global(.container) {
+  width: 75%;
+  margin: 0 auto; 
 }

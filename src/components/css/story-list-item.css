@@ -1,19 +1,27 @@
-@value container-background: #A3BCF9;
+
+.card {
+  background-color: #677077;
+  height: 100%;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  transition: 0.6s;
+	transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+}
 
 .item {
-  color: white;
+  composes: item from "./_flex.css";
+  padding: 1rem;
 }
 
-.container {
-  padding: 16px;
-  background: container-background;
-}
-
-.link {
-  color: #fff;
+.story {
   text-decoration: none;
+  display: block; 
+  color: white; 
+  padding: 1rem;
 }
 
-.link:hover {
-  color: red;
-}
+

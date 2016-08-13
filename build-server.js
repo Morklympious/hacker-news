@@ -18,7 +18,8 @@ builder.plugin('watchify');
 builder.plugin("modular-css/browserify", {
     css   : "dist/css/site.css",
     after : [
-        require("postcss-import")
+        require("postcss-import"),
+        require("autoprefixer")
     ]
 });
 
