@@ -1,0 +1,20 @@
+
+.card {
+  background-color: #677077;
+}
+
+.item {
+  composes: item from "./_flex.css";
+  padding: 1rem;
+  flex-shrink: 2;
+  align-self: center;
+}
+
+.story {
+  text-decoration: none;
+  display: block; 
+  color: white; 
+  padding: 1rem;
+}
+
+

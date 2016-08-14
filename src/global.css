@@ -4,8 +4,6 @@
    since you'll want everything to be able to read these styles.
 */
 
-@import('node_modules/build/pure.css');
-
 * {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -14,15 +12,15 @@
 body {
   margin: 0;
   padding: 16px;
-  margin: 40px auto;
-  max-width:650px;
-  line-height:1.6;
-  font-size:18px;
-  color:#444;
-  padding:0
-  10px
+  background-color: #252839;
+  color: white; 
 }
 
-h1,h2,h3 {
-  line-height:1.2
+a:hover {
+  color: #b5b5b7;
+}
+
+:global(.container) {
+  width: 75%;
+  margin: 0 auto; 
 }

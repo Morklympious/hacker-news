@@ -16,9 +16,11 @@
   "author": "Bradley Stafford",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "browserify": "^13.0.0",
     "ecstatic": "^1.4.0",
     "eslint": "^2.3.0",
+    "eslint-config-arenanet": "^3.0.0",
     "eslint-config-google": "^0.4.0",
     "express": "^4.13.4",
     "firebase": "^2.4.1",
