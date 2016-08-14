@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 16px;
   background-color: #252839;
+  color: white; 
 }
 
 a:hover {

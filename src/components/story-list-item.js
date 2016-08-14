@@ -3,6 +3,8 @@
 var m   = require("mithril"),
     api = require("../config/firebase.js"),
 
+    card = require("./card.js"),
+
     css = require("./css/story-list-item.css");
 
 module.exports = {
@@ -20,15 +22,14 @@ module.exports = {
   },
 
   view : function(ctrl) {
-    return m("li", { class : css.item }, [
-      m("div", { class : css.card },
+    return m("li", { class : css.item },
+      m("div", { class : css.card }, 
         m("a", {
           class  : css.story,
           href   : ctrl.story.url,
           story  : ctrl.story,
           target : "_blank"
         }, ctrl.story.title)
-      )
-    ]);
+    ));
   }
 };

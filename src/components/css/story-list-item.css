@@ -1,20 +1,13 @@
 
 .card {
   background-color: #677077;
-  height: 100%;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
-  transition: 0.6s;
-	transform-style: preserve-3d;
-  backface-visibility: hidden;
-
 }
 
 .item {
   composes: item from "./_flex.css";
   padding: 1rem;
+  flex-shrink: 2;
+  align-self: center;
 }
 
 .story {

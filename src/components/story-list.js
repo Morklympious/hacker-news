@@ -22,6 +22,7 @@ module.exports = {
 
   view : function(ctrl) {
     return m("div", { class : "container" }, [
+      m("h1", "Morklympious' Sad-time Hacker News"),
       m("ul", { class : css.list }, ctrl.stories.map(function(id, index) {
         return m(item, {
           id    : id,
