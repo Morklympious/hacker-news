@@ -3,8 +3,6 @@
 var m   = require("mithril"),
     api = require("../config/firebase.js"),
 
-    card = require("./card.js"),
-
     css = require("./css/story-list-item.css");
 
 module.exports = {
